@@ -4,7 +4,7 @@ node_js:
     - 0.12
 before_script:
     - npm install
-    - npm run tsc
+    - npm run prepublish
 notifications:
     on_success: never
     on_failure: always
