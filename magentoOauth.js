@@ -13,7 +13,7 @@ var CordovaOauthMagento = (function () {
         if (!options.consumerKey || options.consumerKey == "") {
             throw Error("client id must exist");
         }
-        if (!options.consumetSecretKey || options.consumetSecretKey == "") {
+        if (!options.consumerSecretKey || options.consumerSecretKey == "") {
             throw Error("client secret must exist");
         }
         this.magentoOptions = options;
@@ -28,14 +28,13 @@ var CordovaOauthMagento = (function () {
             };
         }
     }
-    CordovaOauthMagento.prototype.login = function () {
+    CordovaOauthMagento.prototype.connect = function () {
         var _this = this;
         if (window.cordova) {
             if (window.cordova.InAppBrowser) {
                 //Login Module Begins
                 if (typeof jsSHA !== "undefined") {
-                    debugger;
-                    var signatureObj = (new utility_1.OauthUtility()).createSignature("POST", this.magentoOptions.baseUrl + "/oauth/initiate", this.oauthObject, { oauth_callback: "http://localhost/callback" }, this.magentoOptions.consumetSecretKey, null);
+                    var signatureObj = (new utility_1.OauthUtility()).createSignature("POST", this.magentoOptions.baseUrl + "/oauth/initiate", this.oauthObject, { oauth_callback: "http://localhost/callback" }, this.magentoOptions.consumerSecretKey, null);
                     var headersInitiate = new http_1.Headers();
                     headersInitiate.append('Authorization', signatureObj.authorization_header);
                     headersInitiate.append('Content-Type', 'application/x-www-form-urlencoded');
@@ -69,7 +68,7 @@ var CordovaOauthMagento = (function () {
                                 this.oauthObject.oauth_token = parameterMap.oauth_token;
                                 this.oauthObject.oauth_nonce = (new utility_1.OauthUtility()).createNonce(5);
                                 this.oauthObject.oauth_verifier = parameterMap.oauth_verifier;
-                                var signatureObj = (new utility_1.OauthUtility()).createSignature("POST", this.magentoOptions.baseUrl + "/oauth/token", this.oauthObject, {}, this.magentoOptions.consumetSecretKey, tokenSecret);
+                                var signatureObj = (new utility_1.OauthUtility()).createSignature("POST", this.magentoOptions.baseUrl + "/oauth/token", this.oauthObject, {}, this.magentoOptions.consumerSecretKey, tokenSecret);
                                 var headerToken = new http_1.Headers();
                                 headerToken.append('Authorization', signatureObj.authorization_header);
                                 headerToken.append('Content-Type', 'application/x-www-form-urlencoded');

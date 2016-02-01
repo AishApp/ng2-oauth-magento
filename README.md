@@ -9,9 +9,9 @@ ng2-oauth-magento is a Angular2 library that helps in establishing connection to
 * jsSHA 1.6.0 Secure Hash Library	
 
 ### Installing ng2-oauth-magento
-
-Download the git hub repository and place it in the nodemodules folder
-
+```
+npm install --save ng2-oauth-magento
+```
 ### Using ng2-oauth-magento
 
 ```javascript
