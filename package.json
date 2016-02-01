@@ -1,0 +1,25 @@
+{
+  "name": "ng2-cordova-oauth-magento",
+  "version": "1.0.0",
+  "description": "Angular2 library to establish connection to magento with oauth1.0",
+  "main": "magentoOauth.ts",
+  "scripts": {
+    "prepublish": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AishApp/ng2-oauth-magento.git"
+  },
+  "author": "Aishwarya",
+  "license": "ISC",
+  "dependencies": {
+    "angular2": "^2.0.0-beta.2",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.13",
+    "reflect-metadata": "^0.1.2",
+    "rxjs": "^5.0.0-beta.0",
+    "systemjs": "^0.19.9",
+    "typescript": "^1.7.5",
+    "zone.js": "^0.5.10"
+  }
+}
