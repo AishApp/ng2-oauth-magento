@@ -1,5 +1,5 @@
 {
-  "name": "ng2-cordova-oauth-magento",
+  "name": "ng2-oauth-magento",
   "version": "1.0.0",
   "description": "Angular2 library to establish connection to magento with oauth1.0",
   "main": "magentoOauth.ts",
