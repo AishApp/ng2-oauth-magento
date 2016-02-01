@@ -15,7 +15,7 @@ npm install ng2-oauth-magento --save
 ### Using ng2-oauth-magento
 
 ```javascript
-import {CordovaOauthMagento} from 'ng2-cordova-oauth/core';
+import {CordovaOauthMagento} from 'ng2-oauth-magento/core';
 
 this.oauthMagento = new CordovaOauthMagento({baseUrl: baseURL, consumerKey: consumerKey, consumetSecretKey: consumetSecretKey});
         this.oauthMagento.login().subscribe((result) => {
