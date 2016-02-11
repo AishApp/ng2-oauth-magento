@@ -8,5 +8,5 @@ export declare class CordovaOauthMagento {
     private oauthObject;
     private http;
     constructor(options?: IMagentoOptions);
-    connect(): any;
+    connect(): Promise<{}>;
 }

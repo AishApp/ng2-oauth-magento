@@ -15,7 +15,6 @@ export class OauthUtility {
         if(typeof jsSHA !== "undefined") {
             var headerAndBodyParameters = Object.assign({},headerParameters);
             var bodyParameterKeys = Object.keys(bodyParameters);
-
             for(var i = 0; i < bodyParameterKeys.length; i++) {
                 headerAndBodyParameters[bodyParameterKeys[i]] = encodeURIComponent(bodyParameters[bodyParameterKeys[i]]);
             }
